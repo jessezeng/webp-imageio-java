@@ -1,0 +1,30 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>webp-imageio</groupId>
+  <artifactId>webp-imageio</artifactId>
+  <version>1.0.0</version>
+  <properties>
+		<maven_compiler_plugin_version>2.3.2</maven_compiler_plugin_version>
+		<java_source_version>1.7</java_source_version>
+		<java_target_version>1.7</java_target_version>
+		<file_encoding>UTF-8</file_encoding>
+  </properties>
+  <build>
+ 	<plugins>
+		<plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-compiler-plugin</artifactId>
+			<version>${maven_compiler_plugin_version}</version>
+			<configuration>
+                <fork>true</fork>
+                <source>${java_source_version}</source>
+				<target>${java_target_version}</target>
+				<encoding>${file_encoding}</encoding>
+                <compilerArgs>
+                    <arg>-XX:MaxPermSize=512M</arg>
+                </compilerArgs>
+			</configuration>
+		</plugin>
+ 	</plugins>
+  </build>
+</project>
